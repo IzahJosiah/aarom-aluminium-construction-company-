@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AARON ALUMINUM AND CONSTRUCTION COMPANY</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {font-family: 'Arial', sans-serif; background: #1a1a1a; color: white;}
+        nav {background: #000; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100;}
+        nav a {color: #ffcc00; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold;}
+        nav a:hover {text-decoration: underline;}
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('product1.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 130px 20px;
+        }
+        h1 {font-size: 55px; color: #ffcc00; text-shadow: 3px 3px 6px #000;}
+        .logo {width: 200px; margin: 25px; border: 4px solid #ffcc00; border-radius: 50%;}
+        
+        .container {padding: 60px 20px; max-width: 1200px; margin: auto;}
+        
+        .services {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px;}
+        .service {
+            background: #2a2a2a; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border-left: 6px solid #ffcc00;
+            text-align: left;
+        }
+        .service h3 {color: #ffcc00; font-size: 22px; margin-bottom: 12px;}
+        
+        .products {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px;}
+        .product {background: #2a2a2a; padding: 20px; border-radius: 12px; text-align: center;}
+        .product img {width: 100%; border-radius: 10px; height: 200px; object-fit: cover; margin-bottom: 15px;}
+        
+        .contact-form {background: #2a2a2a; padding: 40px; border-radius: 12px; margin-top: 30px; text-align: left;}
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 15px; margin: 10px 0; background: #1a1a1a; 
+            border: 2px solid #ffcc00; border-radius: 8px; color: white; font-size: 16px;
+        }
+        .big-btn {background: #ffcc00; color: #000; padding: 20px 60px; font-size: 22px; font-weight: bold; text-decoration: none; border: none; border-radius: 10px; cursor: pointer; margin-top: 15px;}
+        footer {background: #000; text-align: center; padding: 25px; margin-top: 50px; color: #aaa;}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>AARON ALUMINUM</h1>
+        <p style="font-size: 26px; margin: 15px 0;">AND CONSTRUCTION COMPANY</p>
+        <img src="logo.jpg" class="logo" alt="AARON Logo">
+        <p style="font-size: 20px; font-style: italic;">"We don't just build structures. We build legacies."</p>
+    </div>
+
+    <div class="container" id="services">
+        <h2 style="font-size: 38px; color: #ffcc00; text-align: center;">OUR PROFESSIONAL SERVICES</h2>
+        <div class="services">
+            <div class="service"><h3>1. Aluminium Windows</h3><p>Sliding, Casement, Tilt & Turn, Fixed windows. Premium quality glass and installation.</p></div>
+            <div class="service"><h3>2. Aluminium Doors</h3><p>Office doors, Shop doors, Toilet doors, Residential entrance doors. Custom designs.</p></div>
+            <div class="service"><h3>3. Roofing & Cladding</h3><p>Aluminum roofing sheets, Facade cladding, Ceiling work. Weather resistant.</p></div>
+            <div class="service"><h3>4. Curtain Walling</h3><p>Modern glass curtain walls for offices, malls and high-rise buildings.</p></div>
+            <div class="service"><h3>5. Fabrication</h3><p>Gates, Railings, Display Shelves, Shop Fronts, Kiosks. Like the one in the picture.</p></div>
+            <div class="service"><h3>6. General Construction</h3><p>Building, Renovation, Interior & Exterior finishing. Turnkey projects.</p></div>
+        </div>
+    </div>
+
+    <div class="container" id="products">
+        <h2 style="font-size: 38px; color: #ffcc00; text-align: center;">OUR PRODUCTS</h2>
+        <div class="products">
+            <div class="product">
+                <img src="product1.jpg" alt="Aluminum Shelf">
+                <h3>Display Shelf / Kiosk</h3>
+                <p>Blue & White Aluminum. 2 compartments. Strong and durable. Perfect for shops.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Window">
+                <h3>Sliding Windows</h3>
+                <p>Custom sizes available. Dust and water proof. 5 year warranty.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Door">
+                <h3>Shop Front Door</h3>
+                <p>Durable aluminum frame with tempered glass. Secure and elegant.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 style="font-size: 38px; color: #ffcc00; text-align: center;">GET A QUOTE</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <textarea rows="5" placeholder="Tell us what you need... Windows, Doors, Roofing?" required></textarea>
+                <button type="submit" class="big-btn">SEND MESSAGE</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">OR CALL DIRECTLY: <a href="tel:09043616129" style="color: #ffcc00; font-size: 22px;">09043616129</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 AARON ALUMINUM AND CONSTRUCTION COMPANY | Lagos, Nigeria</p>
+    </footer>
+
+</body>
+</html>
