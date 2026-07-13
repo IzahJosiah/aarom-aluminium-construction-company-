@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AAROM | Youth Empowerment & Leadership Initiative in Nigeria</title>
+<meta name="description" content="AAROM empowers youths in Lagos through skills, tech, and community security programs. Founded by Izah Josiah Osiriamhe.">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --gold: #D4AF37;
+    --dark-gold: #B8941F;
+    --white: #FFFFFF;
+    --light-bg: #F5F5F5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', 'Segoe UI', sans-serif; scroll-behavior: smooth;}
+  body{color:#222;line-height:1.7;background:var(--white);}
+  .container{width:90%;max-width:1200px;margin:auto;}
+  
+  /* PRO HEADER - STICKY + SHADOW ON SCROLL */
+  header{background:var(--black);padding:20px 0;position:fixed;width:100%;top:0;z-index:1000;border-bottom:2px solid var(--gold);transition:0.3s;}
+  header.scrolled{background:rgba(10,10,10,0.95);box-shadow:0 5px 20px rgba(212,175,55,0.2);}
+  nav{display:flex;justify-content:space-between;align-items:center;color:var(--white);}
+  .logo{font-size:30px;font-weight:900;color:var(--white);letter-spacing:3px;}
+  .logo span{color:var(--gold);}
+  nav ul{list-style:none;display:flex;gap:40px;}
+  nav ul li a{color:var(--white);text-decoration:none;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:1.5px;position:relative;}
+  nav ul li a:after{content:'';position:absolute;width:0;height:2px;background:var(--gold);bottom:-5px;left:0;transition:0.3s;}
+  nav ul li a:hover:after{width:100%;}
+  nav ul li a:hover{color:var(--gold);}
+
+  /* PRO HERO - FULL SCREEN + ANIMATION */
+  .hero{height:100vh;background:linear-gradient(rgba(10,10,10,0.85), rgba(212,175,55,0.3)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover fixed no-repeat;
+    color:var(--white);display:flex;align-items:center;text-align:left;padding-top:80px;}
+  .hero-content{animation:fadeInUp 1s ease;}
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);}}
+  .hero h1{font-size:60px;font-weight:900;margin-bottom:20px;letter-spacing:4px;text-transform:uppercase;}
+  .hero p{font-size:22px;margin-bottom:40px;max-width:650px;font-weight:300;}
+  .btn{background:var(--gold);color:var(--black);padding:16px 40px;border:none;text-decoration:none;font-weight:900;border-radius:5px;display:inline-block;text-transform:uppercase;letter-spacing:2px;transition:0.3s;box-shadow:0 5px 15px rgba(212,175,55,0.4);}
+  .btn:hover{background:var(--dark-gold);transform:translateY(-3px);box-shadow:0 8px 25px rgba(212,175,55,0.6);}
+
+  /* SECTIONS */
+  section{padding:100px 0;}
+  h2{text-align:center;font-size:40px;margin-bottom:60px;text-transform:uppercase;color:var(--black);position:relative;font-weight:900;}
+  h2:after{content:'';width:100px;height:4px;background:var(--gold);position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);}
+
+  /* PRODUCTS = PROGRAMS SECTION */
+  #programs{background:var(--white);}
+  .programs{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:35px;}
+  .program-card{background:var(--light-bg);padding:40px;text-align:center;border-radius:12px;border-top:5px solid var(--gold);transition:0.4s;position:relative;overflow:hidden;}
+  .program-card:before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg, transparent, rgba(212,175,55,0.1), transparent);transition:0.5s;}
+  .program-card:hover:before{left:100%;}
+  .program-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+  .program-card h3{color:var(--black);margin-bottom:15px;font-size:22px;}
+
+  /* DISCOVER IMPACT - PRO BLACK SECTION */
+  .discover{background:var(--black);color:var(--white);padding:100px 20px;}
+  .discover h2{color:var(--white);}
+  .discover h3{color:var(--gold);font-size:26px;margin-bottom:20px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:30px;margin:40px 0;text-align:center;}
+  .stat-box h4{font-size:42px;color:var(--gold);font-weight:900;}
+  .stat-box p{text-transform:uppercase;letter-spacing:1px;}
+  .discover ul{list-style:none;margin-top:30px;}
+  .discover ul li{margin:18px 0;padding-left:35px;position:relative;font-size:18px;}
+  .discover ul li:before{content:"✓";color:var(--gold);position:absolute;left:0;font-weight:900;font-size:22px;}
+
+  /* CONTACT - PRO FORM */
+  .contact{background:var(--light-bg);}
+  .contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+  .contact-form{background:var(--white);padding:45px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);border-top:5px solid var(--gold);}
+  .contact-form input, .contact-form textarea{width:100%;padding:15px;margin:12px 0;border:2px solid #ddd;border-radius:6px;font-size:16px;transition:0.3s;}
+  .contact-form input:focus, .contact-form textarea:focus{border-color:var(--gold);outline:none;box-shadow:0 0 10px rgba(212,175,55,0.2);}
+  .contact-info h3{color:var(--black);font-size:24px;margin-bottom:20px;}
+  .contact-info p{margin:15px 0;font-size:17px;}
+  .contact-info b{color:var(--gold);}
+
+  /* PRO FOOTER */
+  footer{background:var(--black);color:var(--white);padding:60px 0 20px;text-align:center;border-top:4px solid var(--gold);}
+  .footer-links{display:flex;justify-content:center;gap:40px;margin:30px 0;}
+  .footer-links a{color:var(--white);text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+  .footer-links a:hover{color:var(--gold);}
+  .copyright{border-top:1px solid #333;padding-top:20px;margin-top:30px;font-size:14px;color:#aaa;}
+
+  @media(max-width:900px){
+    .hero h1{font-size:42px;}
+    nav ul{display:none;}
+    .contact-wrapper{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- PRO HEADER -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <div class="logo">AAR<span>OM</span></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- PRO HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>AAROM</h1>
+      <p>YOUTH EMPOWERMENT & LEADERSHIP INITIATIVE<br>Building Safer Communities Through Skills, Technology, and Innovation in Nigeria</p>
+      <a href="#programs" class="btn">EXPLORE PROGRAMS</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="programs">
+  <div class="container">
+    <h2>OUR PROGRAMS</h2>
+    <div class="programs">
+      <div class="program-card">
+        <h3>STREETSAFE NETWORK</h3>
+        <p>Youth-led digital alert system across Lagos. 500+ members connected to respond to security threats in under 2 minutes.</p>
+      </div>
+      <div class="program-card">
+        <h3>SKILL-FOR-PEACE</h3>
+        <p>Free 3-month training in coding, tailoring, and phone repairs. Turning unemployment into opportunity and crime into careers.</p>
+      </div>
+      <div class="program-card">
+        <h3>AAROM CONNECT APP</h3>
+        <p>Tech platform to report conflict, tag unsafe areas, and connect youths to mentors and opportunities across Nigeria.</p>
+      </div>
+      <div class="program-card">
+        <h3>YOUTH-POLICE DIALOGUE</h3>
+        <p>Quarterly meetings building trust between youths and security agencies for faster information sharing and safer streets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVER IMPACT -->
+<section class="discover">
+  <div class="container">
+    <h2>OUR IMPACT</h2>
+    <h3>EMPOWERING YOUTHS, SECURING COMMUNITIES</h3>
+    <div class="stats">
+      <div class="stat-box"><h4>28+</h4><p>Youths Trained</p></div>
+      <div class="stat-box"><h4>3</h4><p>Communities Secured</p></div>
+      <div class="stat-box"><h4>500+</h4><p>Network Members</p></div>
+      <div class="stat-box"><h4>12</h4><p>Graduates Earning</p></div>
+    </div>
+    <ul>
+      <li>Partnered with ALX Africa and NITDA for digital skills training</li>
+      <li>Founded by Izah Josiah Osiriamhe - Youth Leader and Tech Builder</li>
+      <li>Using technology to put safety and opportunity in every youth's hand</li>
+    </ul>
+    <a href="#programs" class="btn" style="margin-top:30px;">VIEW ALL PROGRAMS</a>
+  </div>
+</section>
+
+<!-- PRO CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>CONTACT US</h2>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your Email Address" required>
+        <textarea rows="5" placeholder="How can AAROM help you or how can you partner with us?" required></textarea>
+        <button class="btn" type="submit">SEND MESSAGE</button>
+      </div>
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p><b>Phone:</b> +234 XXX XXX XXXX</p>
+        <p><b>Email:</b> info@aarom.org</p>
+        <p><b>Location:</b> Lagos, Nigeria</p>
+        <p><b>Founder:</b> Izah Josiah Osiriamhe</p>
+        <p style="margin-top:30px;">We are ready to partner with government, NGOs, and private organizations to scale our impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRO FOOTER -->
+<footer>
+  <div class="container">
+    <div class="logo">AAR<span>OM</span></div>
+    <p style="color:var(--gold);">Youth Empowerment & Leadership Initiative</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="copyright">
+      Copyright © 2026 AAROM. Founded by Izah Josiah Osiriamhe. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // PRO EFFECT: Header shadow on scroll
+  window.addEventListener('scroll', function(){
+    let header = document.getElementById('header');
+    if(window.scrollY > 50){
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
